@@ -1,9 +1,10 @@
 import React, { useMemo } from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { BrowserRouter, useHistory, Link , Route, Switch } from "react-router-dom";
 import Experience from "../experience";
 import Github from "../github";
 import Home from "../home";
 import Info from "../info";
+import './index.scss';
 
 const useComponentWillMount = (func: any) => useMemo(func, []);
 
@@ -12,6 +13,8 @@ const BaseLayoutOutside: React.FC = () => {
 };
 
 const Layout: React.FC = () => {
+  let history = useHistory();
+
   useComponentWillMount(() => {
     const path = window.location.pathname.split("/");
     if (path[1] === "home") {
@@ -28,6 +31,23 @@ const Layout: React.FC = () => {
   return (
     <div>
       <BrowserRouter>
+        <div className={'header'}>
+          <Link className={'header-mainIcon'} to="/home">
+            <button >아이콘</button>
+          </Link>
+          <Link to="/home">
+            <button className={'header-menus'}>home</button>
+          </Link>
+          <Link to="/info">
+            <button className={'header-menus'}>info</button>
+          </Link>
+          <Link to="/experience">
+            <button className={'header-menus'}>experience</button>
+        </Link>
+          <Link to="/github">
+            <button className={'header-menus'}>github</button>
+          </Link>
+        </div>
         <Switch>
           <Route path="/home" component={BaseLayoutOutside} />
           <Route path="/info" component={() => <Info />} />
