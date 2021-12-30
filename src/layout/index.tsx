@@ -5,6 +5,7 @@ import Github from "../github";
 import Home from "../home";
 import Info from "../info";
 import './index.scss';
+import  inconIMG from '../shared/images/welcomIcon.png'
 
 const useComponentWillMount = (func: any) => useMemo(func, []);
 
@@ -29,11 +30,13 @@ const Layout: React.FC = () => {
   });
 
   return (
-    <div>
+    <div className="layout">
       <BrowserRouter>
         <div className={'header'}>
           <Link className={'header-mainIcon'} to="/home">
-            <button >아이콘</button>
+            <button>
+              <img src={inconIMG} width={50} height={40} /> 
+            </button>
           </Link>
           <Link to="/home">
             <button className={'header-menus'}>home</button>
