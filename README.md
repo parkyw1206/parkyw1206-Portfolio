@@ -16,5 +16,6 @@ https://superdevresources.com/html-resume-templates/
 사실 welcome 이미지 불러오는 것부터 고역이었다. 보통 require를 불러 img 태그안에 넣어주면 끝나는데 잘 되지않았다.
 따라서, 원하는 svg 사진 파일을 import 시켜 svg 태그안에 넣으니 성공. 이 쉬운 일을 1시간이나 잡아먹었다. 휴.
 
-import  inconIMG from '../shared/images/welcomIcon.png' &nbsp;
-<img src={inconIMG} width={50} height={40} />  &nbsp;
+import  inconIMG from '../shared/images/welcomIcon.png'  
+&nbsp;
+< img src={inconIMG} width={50} height={40} />  &nbsp;
