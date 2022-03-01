@@ -1,0 +1,13 @@
+.info {
+    height: calc(100% - 140px);
+    width: calc(100% - 60px);
+    background-color: yellow;
+    padding:30px;
+    
+    &_title{
+        height: 60px;
+    }
+    &_content{
+
+    }
+}

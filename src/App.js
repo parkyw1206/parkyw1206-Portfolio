@@ -3,7 +3,9 @@ import "./App.css";
 import Layout from "./layout";
 
 function App() {
-  return <Layout />;
+  return <div className="root">
+    <Layout />
+  </div>;
 }
 
 export default App;

@@ -5,60 +5,44 @@ import Github from "../github";
 import Home from "../home";
 import Info from "../info";
 import './index.scss';
-import  inconIMG from '../shared/images/welcomIcon.png'
+import  inconIMG from '../shared/images/HamburgerIcon.svg'
 
 const useComponentWillMount = (func: any) => useMemo(func, []);
 
 const BaseLayoutOutside: React.FC = () => {
   return <Home />;
 };
+const Header: React.FC = () =>{
+  return (
+    <div className="header">
+      <button className="header-mainIcon">
+        {'<'}
+        <span className="png">parkyw1206</span>
+        {' />'}
+      </button>
+      <div className="header-menus">
+        <button className="header-menus--item">Skills</button>
+        <button className="header-menus--item">Education</button>
+        <button className="header-menus--item">Experience</button>
+        <button className="header-menus--item">Projects</button>
+        <button className="header-menus--item">Achievements</button>
+        <button className="header-menus--item">Blogs</button>
+        <button className="header-menus--item">Contact Me</button>
+      </div>
+      <button className="header-hamburger" >
+        <img src={inconIMG} width={50} height={40} /> 
+      </button>
+    </div>
+
+  )
+}
 
 const Layout: React.FC = () => {
-  let history = useHistory();
-
-  useComponentWillMount(() => {
-    const path = window.location.pathname.split("/");
-    if (path[1] === "home") {
-      return <BaseLayoutOutside />;
-    } else if (
-      path.length < 2 ||
-      (path[1] !== "info" && path[1] !== "experience" && path[1] !== "github")
-    ) {
-      console.log(path);
-      window.location.href = `${process.env.PUBLIC_URL}/home`;
-    }
-  });
-
+  
   return (
     <div className="layout">
-      <BrowserRouter>
-        <div className={'header'}>
-          <Link className={'header-mainIcon'} to="/home">
-            <button>
-              <img src={inconIMG} width={50} height={40} /> 
-            </button>
-          </Link>
-          <Link to="/home">
-            <button className={'header-menus'}>home</button>
-          </Link>
-          <Link to="/info">
-            <button className={'header-menus'}>info</button>
-          </Link>
-          <Link to="/experience">
-            <button className={'header-menus'}>experience</button>
-        </Link>
-          <Link to="/github">
-            <button className={'header-menus'}>github</button>
-          </Link>
-        </div>
-        <Switch>
-          <Route path="/home" component={BaseLayoutOutside} />
-          <Route path="/info" component={() => <Info />} />
-          <Route path="/experience" render={() => <Experience />} />
-          <Route path="/github" render={() => <Github />} />
-          <Route component={BaseLayoutOutside} />
-        </Switch>
-      </BrowserRouter>
+      <Header />
+      <BaseLayoutOutside /> 
     </div>
   );
 };

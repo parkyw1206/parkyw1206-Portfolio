@@ -1,27 +1,58 @@
 .layout{
-    height:calc(100vh);
-    width:calc(100vw);
+    height:100%;
+    width:100%;
 }
 .header {
     height: 80px;
     display: flex;
     align-items: center;
     &-mainIcon{
-        margin-left: 10px;
-    }
-    &-menus{
-        font-size: 20px;
-        color: black;
-        font-weight: 900;
-        font-family: cursive;
-        margin-left: 20px;
-        background:none;
-        border: 0;
+        display: inline-flex;
+        align-items: center;
+        font-size: 1.5em;
+        line-height: normal;
+        background: none;
+        border:none;
         cursor: pointer;
-        &:hover{
-            background-color: gray;
-            border-radius: 10px;
+        font-family: "Fredoka";
+        color: #88abff;
+        .png {
+            color: #88abff;
+            font-family: "Fredoka";
+            font-weight: bold;
+            font-feature-settings: "liga", "clig off";
+            font-variant-ligatures: no-common-ligatures;
+            -webkit-font-variant-ligatures: no-common-ligatures;
+            padding: 0 10px;
         }
     }
-    
+    &-menus{
+//        width: calc(100% - 40px);
+        padding: 0 10px;
+        flex:auto;
+        display: flex;
+        transition: max-height 0.2s ease-out;
+       &--item{
+            display: block;
+            padding: 10px 15px;
+            color: #000000;
+            text-decoration: none;
+            background-color: transparent;
+            border: none;
+            max-height: none;
+            cursor: pointer;
+            &:hover{
+                background-color: #f4f4f4;
+            }
+        }
+    } 
+    &-hamburger{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 20px; 
+        &:hover{
+            background-color: #f4f4f4;
+        }
+    }   
 }

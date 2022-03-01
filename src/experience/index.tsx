@@ -5,7 +5,15 @@ export interface MenuState {
 }
 
 const Experience: React.FC = () => {
-  return <div>현재 회사얘기</div>;
+  return (
+    <div className="info">
+      <div className="info_title">
+        현재 회사얘기
+      </div>
+      <div className="info_content">
+        ㅇㄴ
+      </div>
+    </div>); 
 };
 
 export default Experience;
