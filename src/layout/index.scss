@@ -6,6 +6,7 @@
     height: 80px;
     display: flex;
     align-items: center;
+    padding: 15px 20px;
     &-mainIcon{
         display: inline-flex;
         align-items: center;
@@ -29,8 +30,9 @@
     &-menus{
 //        width: calc(100% - 40px);
         padding: 0 10px;
-        flex:auto;
+        //flex:auto;
         display: flex;
+        margin-left: auto;
         transition: max-height 0.2s ease-out;
        &--item{
             display: block;
@@ -40,19 +42,38 @@
             background-color: transparent;
             border: none;
             max-height: none;
+            font-size: 19px;
             cursor: pointer;
             &:hover{
                 background-color: #f4f4f4;
             }
         }
     } 
+    @media screen and (max-width: 1131px) {
+        .header-menus{
+            display: none;
+        }
+    }
+    @media screen and (min-width: 1131px){
+        .header-hamburger{
+            display: none;
+        }
+    }
     &-hamburger{
         background-color: transparent;
         border: none;
+        margin-left: auto;
         cursor: pointer;
         padding: 20px; 
         &:hover{
             background-color: #f4f4f4;
         }
     }   
+}
+.BaseLayoutOutside{
+    display: flex;
+    flex-direction: column;
+    padding:30px;
+    height: 100%;
+    width: 100%;
 }

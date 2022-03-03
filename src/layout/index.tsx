@@ -7,10 +7,11 @@ import Info from "../info";
 import './index.scss';
 import  inconIMG from '../shared/images/HamburgerIcon.svg'
 
-const useComponentWillMount = (func: any) => useMemo(func, []);
-
 const BaseLayoutOutside: React.FC = () => {
-  return <Home />;
+  return <div>
+      <Home />
+      <Info />
+    </div>;
 };
 const Header: React.FC = () =>{
   return (
@@ -28,9 +29,13 @@ const Header: React.FC = () =>{
         <button className="header-menus--item">Achievements</button>
         <button className="header-menus--item">Blogs</button>
         <button className="header-menus--item">Contact Me</button>
+        {/* <label>
+          <input type="checkbox" />
+          <span className="slider"></span>
+        </label> */}
       </div>
       <button className="header-hamburger" >
-        <img src={inconIMG} width={50} height={40} /> 
+        <img src={inconIMG} width={20} height={20} /> 
       </button>
     </div>
 
