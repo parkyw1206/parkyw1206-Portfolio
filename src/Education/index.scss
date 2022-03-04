@@ -1,0 +1,68 @@
+.Education{
+    width: 90%;
+    height: calc(100vh - 40px);
+    padding:20px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+    &-title{
+        font-size: 60px;
+    }
+    &-schools {
+        height: inherit;
+        padding:20px 0;
+        width: 100%;
+
+        > * {
+            flex:  1 1;
+            margin-bottom: 30px;
+        }
+    }
+    &-divider{
+        border-top: 2px solid rgba(211, 211, 211, 0.397);
+        margin-bottom: 20px;
+        height: 30px;
+    }
+    &-school{
+        height: 40%;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        border-bottom: 2px solid rgba(211, 211, 211, 0.397);
+        &--img{
+
+        }
+        &--desc{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+        &--title{
+            font-size: 28px;
+           font-weight: 700;
+        }
+        &--degree{
+            font-weight: 700;
+            font-size: 19px;
+            margin: 5px 0;
+        }
+        &--rounded{
+            object-fit: cover;
+            margin-right: 2rem;
+            width: 6rem;
+            height: 6rem;
+            box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 30%);
+            border-radius: 50%;
+        }
+        &--period{
+            font-size: 19px;
+        }
+        &--mainText{
+            margin-top: 10px;
+        }
+        &--subText{
+            color: #868e96;
+        }
+    }
+}

@@ -1,7 +1,7 @@
 import React, { useMemo } from "react";
 import { BrowserRouter, useHistory, Link , Route, Switch } from "react-router-dom";
 import Experience from "../experience";
-import Github from "../github";
+import Education from "../Education";
 import Home from "../home";
 import Info from "../info";
 import './index.scss';
@@ -13,6 +13,7 @@ const BaseLayoutOutside: React.FC = () => {
       <Home />
       <Info/>
       <Proficiency />
+      <Education />
     </div>;
 };
 const Header: React.FC = () =>{
@@ -25,10 +26,7 @@ const Header: React.FC = () =>{
       </button>
       <div className="header-menus">
         <a href="#info"className="header-menus--item">Skills</a>
-
-        {/* <button className="header-menus--item">
-        </button> */}
-        <button className="header-menus--item">Education</button>
+        <a href="#education"className="header-menus--item">Education</a>
         <button className="header-menus--item">Experience</button>
         <button className="header-menus--item">Projects</button>
         <button className="header-menus--item">Achievements</button>
