@@ -77,8 +77,8 @@ const Home: React.FC = ({}) => {
           </a>
         </div>
         <span className="greet-main_btns">
-          <button className="greet-main_btn">CONTACT ME</button>
-          <button className="greet-main_btn">SEE MY RESUME</button>
+          <a href="#contactMe" className="greet-main_btn">CONTACT ME</a>
+          <a href="https://drive.google.com/file/d/1l7FOYFjDUDSvBIlnu-WMx_4w5btxLti8/view?usp=sharing" className="greet-main_btn">SEE MY RESUME</a>
         </span>
         
       </div>

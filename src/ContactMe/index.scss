@@ -49,3 +49,30 @@
     margin: 0px 1.05em 0px 0.3em; 
     vertical-align: -0.1em;
 }
+
+@media screen and (max-width: 1131px){
+    .contactMe-info--title{
+        font-size: 30px;
+        margin-bottom: 10px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contactMe-img{
+        display: none;
+    }
+    .contactMe-info--div,
+    .contactMe-info--title{
+        align-items: center;
+    }
+    .contactMe-info--text{
+        font-size: 20px;
+    }
+    .contactMe-detail{
+        font-size: 30px;
+        margin: 10px 0;
+    }
+    .contactMe-info{
+        align-items: center;
+        margin-bottom: 0;
+    }
+}
