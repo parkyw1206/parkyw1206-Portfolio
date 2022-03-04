@@ -91,7 +91,6 @@
             &-subtitle{
                 color:#868e96;
                 margin: 19px 0;
-                font-weight:500;
                 font-weight: 600;
                 font-size: 18px;
                 &-li{
@@ -117,6 +116,31 @@
         border-radius: 50%;
         object-fit: scale-down;
         background-color: white;
+    }
+    &_modal{
+        &-company{
+            font-size: 60px;
+            font-weight: 700;
+            color: #003da5;
+        }
+        &-date{
+            font-size: 30px;
+        }
+        &-subtitle{
+            font-weight: 30px;
+            color:#868e96;
+            font-weight: 500;
+        }
+        &-container{
+            &-li{
+                color:#868e96;
+                margin: 10px 0;
+                font-weight: 600;
+                > ul {
+                    font-weight: 400;
+                }
+            }
+        }
     }
 }
 @media screen and (max-width: 1131px){

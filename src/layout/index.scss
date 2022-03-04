@@ -59,6 +59,9 @@
         .header-hamburger{
             display: none;
         }
+        .menu{
+            display: none;
+        }
     }
     &-hamburger{
         background-color: transparent;
@@ -108,3 +111,21 @@
 //     height: 86px;
 //     max-height: 100px;
 // }
+
+.menu{
+    max-height: 486px;
+    clear:both;
+    transition: max-height 0.2s ease-out;
+    position: absolute;
+    top: 70px;
+    background: white;
+    width: 90%;
+    text-align-last: left;
+    padding-left: 0;
+    > li{
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        overflow: hidden;    
+    }
+}

@@ -1,4 +1,4 @@
-import React, { useMemo } from "react";
+import React, { useState } from "react";
 import { BrowserRouter, useHistory, Link , Route, Switch } from "react-router-dom";
 import Experience from "../experience";
 import Education from "../Education";
@@ -7,6 +7,8 @@ import Info from "../info";
 import ContactMe from '../ContactMe';
 import './index.scss';
 import  inconIMG from '../shared/images/HamburgerIcon.svg'
+import  closeIMG from '../shared/images/Close.png'
+
 import Proficiency from "../Proficiency";
 
 const BaseLayoutOutside: React.FC = () => {
@@ -25,7 +27,9 @@ const BaseLayoutOutside: React.FC = () => {
       </div>
     </div>);
 };
+
 const Header: React.FC = () =>{
+  const [showMenu, setShowMenu] = useState(false);
   return (
     <div className="headWrapper">
       <div className="headAction">
@@ -36,19 +40,32 @@ const Header: React.FC = () =>{
         <div className="header-menus">
           <a href="#info"className="header-menus--item">Skills</a>
           <a href="#education"className="header-menus--item">Education</a>
-          <a href="#experience"className="header-menus--item">experience</a>
-          <button className="header-menus--item">Projects</button>
-          <button className="header-menus--item">Achievements</button>
-          <button className="header-menus--item">Blogs</button>
+          <a href="#experience"className="header-menus--item">Experience</a>
+          {/* <a href="#Projects"className="header-menus--item">Projects</a> */}
+          {/* <a href="#Extra"className="header-menus--item">Extra</a> */}
           <a href="#contactMe"className="header-menus--item">contactMe</a>
           {/* <label>
             <input type="checkbox" />
             <span className="slider"></span>
           </label> */}
         </div>
-        <button className="header-hamburger" >
-          <img src={inconIMG} width={20} height={20} /> 
+        <button className="header-hamburger" onClick={()=>setShowMenu(!showMenu)}>
+          {!showMenu ?
+            <img src={inconIMG} width={20} height={20} />  
+            : <img src={closeIMG} width={20} height={20} /> 
+          }
         </button>
+        {showMenu && 
+          <ul className={'menu'}>
+            <li><a href="#info"className="header-menus--item">Skills</a></li>
+            <li><a href="#education"className="header-menus--item">Education</a></li>
+            <li><a href="#experience"className="header-menus--item">Experience</a></li>
+            {/* <li><a href="#Projects"className="header-menus--item">Projects</a></li> */}
+            {/* <li><a href="#Extra"className="header-menus--item">Extra</a></li> */}
+            <li><a href="#contactMe"className="header-menus--item">contactMe</a></li>
+          </ul>
+        }
+        
       </div>
       </div>
     </div>
