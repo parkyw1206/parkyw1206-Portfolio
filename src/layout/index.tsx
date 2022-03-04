@@ -4,6 +4,7 @@ import Experience from "../experience";
 import Education from "../Education";
 import Home from "../home";
 import Info from "../info";
+import ContactMe from '../ContactMe';
 import './index.scss';
 import  inconIMG from '../shared/images/HamburgerIcon.svg'
 import Proficiency from "../Proficiency";
@@ -14,6 +15,13 @@ const BaseLayoutOutside: React.FC = () => {
       <Info/>
       <Proficiency />
       <Education />
+      <ContactMe />
+      <div className="ending">
+        <span>Made by Youngwoo Park
+        <img alt="❤️" draggable="false" src="http://twemoji.maxcdn.com/2/72x72/2764.png" className="heartIcon" />
+        </span>
+        <span>Inspired by DeveloperFolio Team</span>
+      </div>
     </div>;
 };
 const Header: React.FC = () =>{
@@ -31,7 +39,7 @@ const Header: React.FC = () =>{
         <button className="header-menus--item">Projects</button>
         <button className="header-menus--item">Achievements</button>
         <button className="header-menus--item">Blogs</button>
-        <button className="header-menus--item">Contact Me</button>
+        <a href="#contactMe"className="header-menus--item">contactMe</a>
         {/* <label>
           <input type="checkbox" />
           <span className="slider"></span>

@@ -77,3 +77,20 @@
     height: 100%;
     width: 100%;
 }
+.ending{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    padding-bottom: 1rem;
+    > span{
+        margin: 16px 0;        
+        color: #868e96 !important;
+        font-size: 18px;
+    }
+}
+.heartIcon{
+    height: 1em; 
+    width: 1em; 
+    margin: 0px 0.05em 0px 0.1em; 
+    vertical-align: -0.1em;
+}
