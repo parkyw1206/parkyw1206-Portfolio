@@ -6,11 +6,13 @@ import Home from "../home";
 import Info from "../info";
 import './index.scss';
 import  inconIMG from '../shared/images/HamburgerIcon.svg'
+import Proficiency from "../Proficiency";
 
 const BaseLayoutOutside: React.FC = () => {
   return <div>
       <Home />
-      <Info />
+      <Info/>
+      <Proficiency />
     </div>;
 };
 const Header: React.FC = () =>{
@@ -22,7 +24,10 @@ const Header: React.FC = () =>{
         {' />'}
       </button>
       <div className="header-menus">
-        <button className="header-menus--item">Skills</button>
+        <a href="#info"className="header-menus--item">Skills</a>
+
+        {/* <button className="header-menus--item">
+        </button> */}
         <button className="header-menus--item">Education</button>
         <button className="header-menus--item">Experience</button>
         <button className="header-menus--item">Projects</button>

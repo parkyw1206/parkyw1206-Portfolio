@@ -12,3 +12,6 @@ code {
 span{
   font-family: 'NotoSansKR';
 }
+html{
+	scroll-behavior: smooth;
+}

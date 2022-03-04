@@ -8,9 +8,9 @@ export interface MenuState {
   routePath: string;
 }
 
-const Home: React.FC = () => {
+const Home: React.FC = ({}) => {
   return( 
-    <div className="greet-main">
+    <div className="greet-main" id="#home">
       <div className="greet-main_text">
         <span className="greet-main_text--name">
           <span className="wave-emoji">
@@ -19,7 +19,7 @@ const Home: React.FC = () => {
           </span>
           <span  className="greet-main_text--desc">저는 열정적인 프론트 엔드 엔지니어입니다.
           <img alt="🚀" draggable="false" src="http://twemoji.maxcdn.com/2/72x72/1f680.png" className="passionate-emoji"></img> 
-          데이터 보안 분야에서 클라우드 서비스 프론트 엔드를 개발하고 있습니다. Typescript/Javacript/React를 이용한 웹 개발 경험이 있습니다. </span>
+          현재 데이터 보안 분야에서 클라우드 서비스 프론트 엔드를 개발하고 있습니다. Typescript/Javacript/React를 이용한 웹 개발 경험이 있습니다. </span>
         </span>
         <div className="greet-main_text-icons">
           <a
