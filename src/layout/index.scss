@@ -129,3 +129,24 @@
         overflow: hidden;    
     }
 }
+
+.base{
+    position: relative;
+}
+.upScrollbtn{
+    position: fixed;
+    bottom: 20px;
+    right: 0px;
+    width: 170px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 15px;
+    font-size: 25px;
+    transition: all 0.3s ease-in-out 0s;
+        &:hover{
+            transition: all 0.3s ease 0s;
+            transform: translateY(-3px);
+        }
+  }

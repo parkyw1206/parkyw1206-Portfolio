@@ -23,24 +23,34 @@ const Info: React.FC = () => {
         </span>
         <div className="info_text-devList">
           <div className="info_text-dev">
-            <img src={TypescriptIcon} width={'50px'} height={'50px'} />
+          <div className="info_text-dev--icon">
+            <img src="https://techstack-generator.vercel.app/ts-icon.svg" alt="icon" width="50" height="50" />
+          </div>
             <span className="info_text-dev--text">Typescript</span>
           </div>         
           <div className="info_text-dev">
-            <FontAwesomeIcon icon={faJs} />
+          <div className="info_text-dev--icon">
+            <img src="https://techstack-generator.vercel.app/js-icon.svg" alt="icon" width="50" height="50" />
+          </div>
             <span className="info_text-dev--text">Javascript</span>
           </div>
           <div className="info_text-dev">
-            <FontAwesomeIcon icon={faReact} />
+          <div  className="info_text-dev--icon">
+            <img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="50" height="50" />
+          </div>
             <span className="info_text-dev--text">React</span>
           </div>
 
           <div className="info_text-dev">
-            <img src={StorybookIcon} width={'55px'} height={'55px'} />
+          <div className="info_text-dev--icon">
+            <img src="https://techstack-generator.vercel.app/storybook-icon.svg" alt="icon" width="50" height="50" />
+          </div>
             <span className="info_text-dev--text">Storybook</span>
           </div>         
           <div className="info_text-dev">
-            <FontAwesomeIcon icon={faSass} />
+          <div  className="info_text-dev--icon">
+            <img src="https://techstack-generator.vercel.app/sass-icon.svg" alt="icon" width="50" height="50" />
+          </div>
             <span className="info_text-dev--text">Sass</span>
           </div>         
         </div>

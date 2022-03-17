@@ -8,11 +8,11 @@ import ContactMe from '../ContactMe';
 import './index.scss';
 import  inconIMG from '../shared/images/HamburgerIcon.svg'
 import  closeIMG from '../shared/images/Close.png'
-
+import ballonImg from '../shared/images/Ballon.svg'
 import Proficiency from "../Proficiency";
 
 const BaseLayoutOutside: React.FC = () => {
-  return (<div>
+  return (<div className="base">
       <Home />
       <Info/>
       <Proficiency />
@@ -43,7 +43,7 @@ const Header: React.FC = () =>{
           <a href="#experience"className="header-menus--item">Experience</a>
           {/* <a href="#Projects"className="header-menus--item">Projects</a> */}
           {/* <a href="#Extra"className="header-menus--item">Extra</a> */}
-          <a href="#contactMe"className="header-menus--item">contactMe</a>
+          <a href="#contactMe"className="header-menus--item">Contac tMe</a>
           {/* <label>
             <input type="checkbox" />
             <span className="slider"></span>
@@ -62,7 +62,7 @@ const Header: React.FC = () =>{
             <li><a href="#experience"className="header-menus--item">Experience</a></li>
             {/* <li><a href="#Projects"className="header-menus--item">Projects</a></li> */}
             {/* <li><a href="#Extra"className="header-menus--item">Extra</a></li> */}
-            <li><a href="#contactMe"className="header-menus--item">contactMe</a></li>
+            <li><a href="#contactMe"className="header-menus--item">Contact Me</a></li>
           </ul>
         }
         
@@ -79,6 +79,7 @@ const Layout: React.FC = () => {
     <div className="layout">
       <Header />
       <BaseLayoutOutside /> 
+       <img src={ballonImg} className="upScrollbtn" onClick={()=>window.scrollTo(0,0)} />        
     </div>
   );
 };
