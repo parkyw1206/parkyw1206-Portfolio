@@ -1,14 +1,18 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useContext, useState, useCallback } from "react";
 import "./index.scss"
 import GreetingIcon from '../shared/images/Greeting.svg'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faFacebook, faLinkedin,faInstagram,faVimeo } from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import StyleContext from "../contexts/StyleContext";
+
 export interface MenuState {
   routePath: string;
 }
 
 const Home: React.FC = ({}) => {
+  const {isDark} = useContext(StyleContext);
+
   return( 
     <div className="greet-main" id="#home">
       <div className="greet-main_text">
@@ -17,7 +21,7 @@ const Home: React.FC = ({}) => {
           Hi all, I'm Youngwoo
             <img alt="👋" draggable="false" src="http://twemoji.maxcdn.com/2/72x72/1f44b.png" className="wave-emoji-png"  />
           </span>
-          <span  className="greet-main_text--desc">저는 열정적인 프론트 엔드 엔지니어입니다.
+          <span  className={isDark ? "dark greet-main_text--desc":"greet-main_text--desc"}>저는 열정적인 프론트 엔드 엔지니어입니다.
           <img alt="🚀" draggable="false" src="http://twemoji.maxcdn.com/2/72x72/1f680.png" className="passionate-emoji"></img> 
           현재 데이터 보안 분야에서 클라우드 서비스 프론트 엔드를 개발하고 있습니다. Typescript/Javacript/React를 이용한 웹 개발 경험이 있습니다. </span>
         </span>

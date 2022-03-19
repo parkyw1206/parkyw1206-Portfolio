@@ -10,6 +10,12 @@
      flex: 1 1;
      margin-bottom: 30px;
  }
+ &_img {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+ }
  &_text{
      width: 50%;
      &--name{
@@ -17,7 +23,6 @@
         font-size: 60px;
         font-weight: 600;
         display: flex;
-        align-items: center;
      }
      &--desc{
          color: #868e96;
@@ -133,6 +138,7 @@
     }
     .greet-main_text--name{
         font-size: 30px;
+        align-items: center;
     }
     .greet-main_text-icons{
         text-align: center;
