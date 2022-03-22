@@ -1,12 +1,15 @@
-import React, { useEffect, useState, useCallback } from "react";
+import React, { useContext, useState, useCallback } from "react";
 import './index.scss'
 import ContactIcon from '../shared/images/Email.svg'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faFacebook, faLinkedin,faInstagram,faVimeo } from "@fortawesome/free-brands-svg-icons";
 import {faEnvelope} from "@fortawesome/free-solid-svg-icons";
+import StyleContext from "../contexts/StyleContext";
 
 const ContactMe: React.FC = () => {
+  const {isDark} = useContext(StyleContext);
+
   return (
     <div className="contactMe" id="contactMe">
       <div className="contactMe-info">
@@ -14,12 +17,12 @@ const ContactMe: React.FC = () => {
           Contact Me
           <img alt="☎️" draggable="false" src="http://twemoji.maxcdn.com/2/72x72/260e.png" className="phoneIcon"></img>
         </div>
-        <div className="contactMe-info--text">
+        <div className={isDark ? "dark contactMe-info--text":"contactMe-info--text"}>
           이외에 궁금하신 게 있으시다면 아래로 연락주세요.
         </div>
         <div className="contactMe-info--div">
-        <a className="contactMe-detail" href="tel:+82-1076891737">+82-1076891737</a>
-        <a className="contactMe-detail" href="mailto:parkyw1206@gmail.com">parkyw1206@gmail.com</a>
+        <a className={isDark ? "dark contactMe-detail":"contactMe-detail"} href="tel:+82-1076891737">+82-1076891737</a>
+        <a className={isDark ? "dark contactMe-detail":"contactMe-detail"} href="mailto:parkyw1206@gmail.com">parkyw1206@gmail.com</a>
         <div className="greet-main_text-icons">
           <a
             href={"https://github.com/parkyw1206"}

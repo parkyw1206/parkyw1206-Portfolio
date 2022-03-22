@@ -1,6 +1,7 @@
 import React, { useState,useContext} from "react";
 import { BrowserRouter, useHistory, Link , Route, Switch } from "react-router-dom";
 import Experience from "../experience";
+import Projects from '../Projects';
 import Education from "../Education";
 import Home from "../home";
 import Info from "../info";
@@ -17,17 +18,20 @@ import {useLocalStorage} from "../hooks/useLocalStorage";
 import {StyleProvider} from "../contexts/StyleContext";
 import '../common.scss';
 const BaseLayoutOutside: React.FC = () => {
+  const {isDark} = useContext(StyleContext);
 
   return (<div className="base">
         <Home />
         <Info/>
         <Proficiency />
         <Education />
+        <Projects />
         <Experience />
         <ContactMe />
-        <div className="footer">
-          <span>Made by Youngwoo Park
-          <img alt="❤️" draggable="false" src="http://twemoji.maxcdn.com/2/72x72/2764.png" className="heartIcon" />
+        <div className={isDark ? "footer dark":"footer"}>
+          <span>
+            Made by Youngwoo Park
+            <img alt="❤️" draggable="false" src="http://twemoji.maxcdn.com/2/72x72/2764.png" className="heartIcon" />
           </span>
           <span>Inspired by DeveloperFolio Team</span>
         </div>

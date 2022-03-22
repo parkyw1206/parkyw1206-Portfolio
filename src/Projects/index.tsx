@@ -7,7 +7,7 @@ export interface MenuState {
   routePath: string;
 }
 
-const Experience: React.FC = () => {
+const Projects: React.FC = () => {
   const [showExperienceDetail1, setShowExperienceDetail1] = useState(false)
   const [showExperienceDetail2, setShowExperienceDetail2] = useState(false)
 
@@ -83,7 +83,7 @@ const Experience: React.FC = () => {
         </ul>
       </Modal>
       <div className="experience_title">
-        Experience
+        Projects
       </div>
       <div className="experience_container">
         <div className="experience_container--card"  onClick={()=>setShowExperienceDetail1(true)}>
@@ -128,4 +128,4 @@ const Experience: React.FC = () => {
     </div>); 
 };
 
-export default Experience;
+export default Projects;

@@ -1,10 +1,20 @@
 .dark{
     background-color: #171c28 !important; 
     color : white !important;
+    > span{
+        color : white !important;    
+    }
 }
 .dark_btn {
     color : white !important;
     &:hover{
         background-color: rgba(255,255,255,0.1) !important;
     }
+}
+.bold{
+    font-weight: bold;
+}
+.flex{
+    display: flex;
+    align-items: center;
 }
