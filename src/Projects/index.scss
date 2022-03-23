@@ -1,4 +1,4 @@
-.experience{
+.projects{
     display: flex;
     flex-direction: column;
     padding:20px 10px;
@@ -41,17 +41,17 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: 150%;
-                background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5));
+                background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3));
                 border-radius: 10px 10px 0px 0px;
                 -moz-filter: blur(0px);
                 -o-filter: blur(0px);
                 -ms-filter: blur(0px);
                 filter: blur(0px);
-                height: 15rem;
+                height: 10rem;
                 display: flex;
                 align-items: flex-end;
                 justify-content: center;
-                background-color: #003da5;
+                background-color: #aaa5ff;
             } 
             &-company{
                 position: absolute;
@@ -66,10 +66,10 @@
                 color: #fff;
                 font-size: 25px;
                 font-weight: 700;
+                text-align: center;
             } 
             &-detail{
                 padding: 1.5rem;
-                margin-top: 2rem;
                 height: 80%;
             }
             &-role{
@@ -119,6 +119,10 @@
         background-color: white;
     }
     &_modal{
+        &-pics{
+            text-align: center;
+            padding: 30px;
+        }
         &-close {
             margin-left: auto;
             font-weight: bold;
@@ -135,9 +139,9 @@
             }
         }
         &-company{
-            font-size: 60px;
+            font-size: 30px;
             font-weight: 700;
-            color: #003da5;
+            color: #aaa5ff;
         }
         &-date{
             font-size: 30px;
@@ -169,27 +173,26 @@
     }
 }
 @media screen and (max-width: 1131px){
-    .experience_title{
+    .projects_title{
         font-size: 30px;
         margin-bottom: 10px;
         margin-left: auto;
         margin-right: auto;
     }
-    .experience_container--card-banner {
-        height: 15rem;
+    .projects_container--card-banner {
+        height: 11rem;
     }
-    .experience_container--card{
+    .projects_container--card{
         height: 90%;
     }
-    .experience_container--card-role{
+    .projects_container--card-role{
         font-size: 20px;
-        padding-top: 4rem;
     }
-    .experience_container--card-date{
+    .projects_container--card-date{
         font-size: 18px;
     }
-    .experience_container--card-subtitle-li,
-    .experience_container--card-subtitle{
+    .projects_container--card-subtitle-li,
+    .projects_container--card-subtitle{
         font-size: 14px;
     }
 }

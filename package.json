@@ -16,7 +16,7 @@
     "@types/react-router": "^5.1.17",
     "@types/react-router-dom": "^5.1.5",
     "firebase": "^9.6.8",
-    "prettier": "^2.5.1",
+    "prettier": "^2.6.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-headroom": "^3.2.0",

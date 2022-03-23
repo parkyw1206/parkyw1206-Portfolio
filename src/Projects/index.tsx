@@ -1,6 +1,11 @@
 import React, { useEffect, useState, useCallback } from "react";
 import './index.scss'
-import fasooIMG from '../shared/images/fasoo.png'
+import '../common.scss'
+import projectOne1 from '../shared/images/project1/1.png'
+import projectOne2 from '../shared/images/project1/2.png'
+import projectOne3 from '../shared/images/project1/3.png'
+import projectOne4 from '../shared/images/project1/4.png'
+import projectOne5 from '../shared/images/project1/5.png'
 import Modal from 'react-modal';
 
 export interface MenuState {
@@ -10,67 +15,64 @@ export interface MenuState {
 const Projects: React.FC = () => {
   const [showExperienceDetail1, setShowExperienceDetail1] = useState(false)
   const [showExperienceDetail2, setShowExperienceDetail2] = useState(false)
-
-  return (
-    <div className="experience" id="experience">
-      
+  const ProjectOneModal: React.FC= ()=>{
+    const [showProjectOnePic, setShowProjectOnepic] = useState(1);
+    return (
       <Modal isOpen={showExperienceDetail1} onRequestClose={()=>setShowExperienceDetail1(false)}>
-        <div className="flex">
-          <div className="experience_modal-company">FASOO</div>
-          <button className={"experience_modal-close "} onClick={()=>setShowExperienceDetail1(false)}> X</button>
-        </div>        
-        <div className="experience_modal-date">Dec 2020 - Present</div>
-        <div>파수는 데이터 및 <span className="bold">소프트웨어 보안 솔루션</span>서비스 전문기업입니다.</div>
-        <div className="experience_modal-description">기본적으로 외부 협업 솔루션인 Wrapsody eCo의 <span className="bold">React 프레임 워크 기반의 프론트 앤드 개발 업무</span>를 담당하고 있으며, Wrapsody eCo의 단순한 백앤드 업무,
-            문서 통합 관리 플랫폼인 Wrapsody의 프론트 앤드를 담당하고 있습니다.
-        </div>
+      <div className="flex">
+        <div className="projects_modal-company">UCSD-themed Dungeon Crawler Game</div>
+        <button className={"projects_modal-close "} onClick={()=>setShowExperienceDetail1(false)}> X</button>
+      </div>        
+      <div className="projects_modal-date">Jan 2019 - Mar 2019</div>
+      <div  className="projects_modal-pics">
+        {showProjectOnePic === 1 ? <img src={projectOne1} />:
+        showProjectOnePic === 2 ? <img src={projectOne1} />:
+        showProjectOnePic === 3 ? <img src={projectOne1} />:
+        showProjectOnePic === 4 ? <img src={projectOne1} />:
+        showProjectOnePic === 5 ? <img src={projectOne1} />:
+        <img src={projectOne1} />}
+      </div>
+      <div>University of California, San Diego에 유명한 Geisel 도서관을 <span className="bold">용사가 몬스터와 싸우며 옥상까지 가는 게임</span>입니다.</div>
+      <div className="projects_modal-description">
+        처음으로 Git을 이용해 다른 사람들과 협업해 보고 timeline을 짜며 회의를 통해 Java를 기반으로 개발하며
+        진행한 프로젝트 입니다. 저는 이 게임에서 첫 로그인 기능과 계정 관리 그리고 각 사용자들의 성적을 text파일에 모아둬 게임이 끝날 때 TOP 10 이름을 보여주도록했습니다.
+      </div>
 
-        <ul className="experience_modal-container">
-          <li className="experience_modal-container-li">
-            <div className="experience_modal-container-title">Wrapsody eCo 2.0 UI/UX 전면 패치</div>
-            <div className="experience_modal-container-div">2021.03 - 현재</div>
-            <ul>
-              <li>프로젝트 소개: 사내 보안 클라우드 솔루션(Wrapsody eCo) UI/UX 개편</li>
-              <li>사용 언어/기술: Typescript, React, Storybook, Redux</li>
-              <li>Javascript와 Mobx를 사용하던 기존 사이트를 Typescript와 Redux로 변경</li>
-              <li>사용자가 최대한 쉽게 사용할 수 있고 정보를 빠르게 찾을 수 있도록 UI 개선</li>
-              <li>UI 변경 후, 고객 13% 증가</li>
-            </ul>
-          </li>
-          <li className="experience_modal-container-li">
-            <div className="experience_modal-container-title"> 웹뷰를 이용해 Wrapsody eCo 윈도우 클라이언트 지원</div>
-            <div className="experience_modal-container-div">2021.03 - 현재</div>
-            <ul>
-              <li>프로젝트 소개: 사용자의 편의성을 높여 좀 더 편하게 서비스를 사용하기 위해 윈도우 클라이
-언트 웹뷰 UI 개발 </li>
-              <li>사용 언어/기술: Typescript, React, Storybook</li>
-              <li>웹에서 사용하는 기능들을 클라이언트에서도 80%의 기능을 쉽게 사용 가능</li>
-            </ul>
-          </li>
-          <li className="experience_modal-container-li">
-          <div className="experience_modal-container-title">WebRTC를 이용한 화상 회의 서비스 만들기</div>
-            <div className="experience_modal-container-div">2020.12 - 2020.02</div>
-            <ul>
-              <li>프로젝트 소개: 코로나 시국에 필요한 비대면 화상회의를 위해 webRTC를 통한 화상회의 서
-비스 구축</li>
-              <li>단건 및 되풀이 화상회의 예약, 취소, 상세 정보, 등의 기술을 개발</li>
-              <li>사용 언어 / 기술 : Javascript, React</li>
-              <li>13명의 사용자들이 동시에 사용</li>
-            </ul>
-          </li>
-        </ul>
-      </Modal>
+      <div className="Bold">Background</div>
+      <div className="projects_modal-description">
+        <div>2019년 봄학기 재학 당시, "Introduction to Computer Science
+          and Object-Oriented Programming: Java"이라는 수업에서 진행한 4인 팀 프로젝트입니다. 4명의 팀원들이 가장 좋아하는 것이 무엇이고 어떤 걸 개발하고 싶냐는 주제로 회의를 한 결과, 모두
+          게임을 좋아한다는 공통점을 찾아 게임을 진행하게 되었습니다. 평범한 적을 무찌르는 게임이 아닌, UCSD 학생들이 많은 중간고사들, 에세이들, 낮은 성적들이라는 학생으로서의 적을 무찔러 
+          결국 가장 윗층인 옥상까지 가 졸업할 수 있도록 진행하는 게임입니다.
+        </div>
+      </div>
+
+      <div className="Bold">Meaning</div>
+      <div className="projects_modal-description">
+        <div>처음으로 Git을 이용해 다른 사람들과 협업한 경험이 있는 프로젝트라는 점에서 의미가 깊습니다. Git을 저장용도만으로 사용하는
+        것이 아닌 다른 사람들과 코드를 어떻게 주고 받아야하는 지 배웠습니다. 또한, 한 학기 동안 여러 나라 학생들과 같은 이야기를 하고 같이 개발을 하며 다른 사람들과 어떻게 함께 개발해야하는
+        지 배울 수 있었던 프로젝트였습니다. </div>
+      </div>
+      <div className="Bold">Technology Stack(s)</div>
+      <div className="projects_modal-description">Language: Java</div>
+      <div className="Bold">Site</div>
+      <div className="projects_modal-description">https://60alex60.wixsite.com/geiseldungeon</div>
+    </Modal>
+    );
+  }
+  const ProjectTwoModal : React.FC = ()=>{
+    return(
       <Modal isOpen={showExperienceDetail2} onRequestClose={()=>setShowExperienceDetail2(false)}>
         <div className="flex">
-          <div className="experience_modal-company">FASOO</div>
-          <button className={"experience_modal-close "} onClick={()=>setShowExperienceDetail2(false)}> X</button>
+          <div className="projects_modal-company">FASOOFASOOFASOO</div>
+          <button className={"projects_modal-close "} onClick={()=>setShowExperienceDetail2(false)}> X</button>
         </div> 
-        <div className="experience_modal-date">June 2020 - September 2020</div>
-        <div className="experience_modal-subtitle">랩소디 개발팀  / 인턴</div>
-        <ul  className="experience_modal-container">
-          <li className="experience_modal-container-li">
-            <div className="experience_modal-container-title">CAD 파일 미리보기 서비스 만들기</div>
-            <div className="experience_modal-container-div">2021.03 - 현재</div>
+        <div className="projects_modal-date">June 2020 - September 2020</div>
+        <div className="projects_modal-subtitle">랩소디 개발팀  / 인턴</div>
+        <ul  className="projects_modal-container">
+          <li className="projects_modal-container-li">
+            <div className="projects_modal-container-title">CAD 파일 미리보기 서비스 만들기</div>
+            <div className="projects_modal-container-div">2021.03 - 현재</div>
             
             <ul>
               <li>프로젝트 소개: 문서 가상화 플랫폼에서 CAD 파일의 미리보기 서비스 개발</li>
@@ -82,43 +84,54 @@ const Projects: React.FC = () => {
           </li>
         </ul>
       </Modal>
-      <div className="experience_title">
+    )
+  }
+  return (
+    <div className="projects" id="projects">
+      { <ProjectOneModal />}
+      { <ProjectTwoModal />}
+      
+      <div className="projects_title">
         Projects
       </div>
-      <div className="experience_container">
-        <div className="experience_container--card"  onClick={()=>setShowExperienceDetail1(true)}>
-          <div className="experience_container--card-banner">
-          <div className="experience_container--card-company">FASOO</div>
-          <img crossOrigin="anonymous" className="experience-roundedimg" src={fasooIMG} alt="Quora" />
+      <div className="projects_container">
+        <div className="projects_container--card"  onClick={()=>setShowExperienceDetail1(true)}>
+          <div className="projects_container--card-banner">
+          <div className="projects_container--card-company">UCSD-themed Dungeon Crawler Game</div>
           </div>
-          <div className="experience_container--card-detail">
-            <div className="experience_container--card-role">프론트 엔드 개발 사원</div>
-            <div className="experience_container--card-date">Dec 2020 - Present</div>
-            <div className="experience_container--card-subtitle">랩소디 에코 프론트 엔드 개발</div>
+          <div className="projects_container--card-detail">
+            <div className="projects_container--card-role">학부 3학년 수업 4인 팀 프로젝트</div>
+            <div className="projects_container--card-date">Jan 2019 - Mar 2019</div>
+            <div className="projects_container--card-subtitle">주요 기능</div>
             <ul>
-              <li className="experience_container--card-subtitle-li">
-                Wrapsody eCo 2.0 UI/UX 전면 패치
+              <li className="projects_container--card-subtitle-li">
+                1층부터 시작해 가이젤 도서관 가장 윗층까지 배틀해 올라가는 게임
               </li>
-              <li className="experience_container--card-subtitle-li">
-                웹뷰를 이용해 Wrapsody eCo 윈도우 클라이언트 지원
+              <li className="projects_container--card-subtitle-li">
+                로그인 및 계정 기능 개발
               </li>
-              <li className="experience_container--card-subtitle-li">
-               WebRTC를 이용한 화상 회의 서비스 만들기
+              <li className="projects_container--card-subtitle-li">
+               각 사용자 별 순위를 모아 가장 마지막 화면에 순위 보여줌
+              </li>
+            </ul>
+            <div className="projects_container--card-subtitle">언어</div>
+            <ul>
+              <li className="projects_container--card-subtitle-li">
+                Java,Javafx
               </li>
             </ul>
           </div>
         </div>
-        <div className="experience_container--card"  onClick={()=>setShowExperienceDetail2(true)}>
-          <div className="experience_container--card-banner">
-          <div className="experience_container--card-company">FASOO</div>
-          <img crossOrigin="anonymous" className="experience-roundedimg" src={fasooIMG} alt="Quora" />
+        <div className="projects_container--card"  onClick={()=>setShowExperienceDetail2(true)}>
+          <div className="projects_container--card-banner">
+          <div className="projects_container--card-company">FASOO</div>
           </div>
-          <div className="experience_container--card-detail">
-            <div className="experience_container--card-role">인턴</div>            
-            <div className="experience_container--card-date">June 2020 - Sep 2020</div>
-            <div className="experience_container--card-subtitle">랩소디 fullstack 개발</div>
+          <div className="projects_container--card-detail">
+            <div className="projects_container--card-role">인턴</div>            
+            <div className="projects_container--card-date">June 2020 - Sep 2020</div>
+            <div className="projects_container--card-subtitle">랩소디 fullstack 개발</div>
             <ul>
-              <li className="experience_container--card-subtitle-li">
+              <li className="projects_container--card-subtitle-li">
                 CAD 파일 미리보기 서비스 만들기
               </li>
             </ul>
