@@ -119,9 +119,29 @@
         background-color: white;
     }
     &_modal{
+        &-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-items: center;
+            margin-bottom:20px;
+            
+            &--btn{
+                background-color: transparent;
+                height: 40px;
+                width: 40px;
+                border: transparent;
+                border-radius: 10px;
+                cursor: pointer;
+                &:hover{
+                    background-color: #f4f4f4;
+                }
+            }
+        }
         &-pics{
             text-align: center;
             padding: 30px;
+            height: 400px;
         }
         &-close {
             margin-left: auto;

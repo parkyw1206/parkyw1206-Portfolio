@@ -5,7 +5,6 @@ import projectOne1 from '../shared/images/project1/1.png'
 import projectOne2 from '../shared/images/project1/2.png'
 import projectOne3 from '../shared/images/project1/3.png'
 import projectOne4 from '../shared/images/project1/4.png'
-import projectOne5 from '../shared/images/project1/5.png'
 import Modal from 'react-modal';
 
 export interface MenuState {
@@ -24,13 +23,19 @@ const Projects: React.FC = () => {
         <button className={"projects_modal-close "} onClick={()=>setShowExperienceDetail1(false)}> X</button>
       </div>        
       <div className="projects_modal-date">Jan 2019 - Mar 2019</div>
-      <div  className="projects_modal-pics">
-        {showProjectOnePic === 1 ? <img src={projectOne1} />:
-        showProjectOnePic === 2 ? <img src={projectOne1} />:
-        showProjectOnePic === 3 ? <img src={projectOne1} />:
-        showProjectOnePic === 4 ? <img src={projectOne1} />:
-        showProjectOnePic === 5 ? <img src={projectOne1} />:
-        <img src={projectOne1} />}
+      <div className="projects_modal-box">
+        <div  className="projects_modal-pics">
+          {showProjectOnePic === 1 ? <img src={projectOne1} />:
+          showProjectOnePic === 2 ? <img src={projectOne2} />:
+          showProjectOnePic === 3 ? <img src={projectOne3} />:
+          showProjectOnePic === 4 ? <img src={projectOne4} />:
+          <img src={projectOne1} />}
+        </div>
+        <div>
+          <button className="projects_modal-box--btn" onClick={()=>setShowProjectOnepic(showProjectOnePic == 1 ? 4 : showProjectOnePic-1)}>{'<'}</button>
+          <span>{showProjectOnePic + '/4'}</span>
+          <button className="projects_modal-box--btn"onClick={()=>setShowProjectOnepic(showProjectOnePic == 4 ? 1 : showProjectOnePic+1)}>{'>'}</button>
+        </div>
       </div>
       <div>University of California, San Diego에 유명한 Geisel 도서관을 <span className="bold">용사가 몬스터와 싸우며 옥상까지 가는 게임</span>입니다.</div>
       <div className="projects_modal-description">
