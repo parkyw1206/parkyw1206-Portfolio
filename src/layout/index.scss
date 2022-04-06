@@ -127,10 +127,18 @@
 //     transform: translate3d(0px, 0px, 0px);
 //     transition: all 0.2s ease-in-out 0s;
 // }
-// .headWrapper{
-//     height: 86px;
-//     max-height: 100px;
-// }
+.headWrapper{
+   position:fixed;
+   width:100%;
+   top: 0px;
+   z-index:10;
+   &--dark{
+       background-color: #171c28;
+   }
+   &--bright{
+       background-color: #FFFFFF;
+   }
+}
 
 .menu{
     max-height: 486px;

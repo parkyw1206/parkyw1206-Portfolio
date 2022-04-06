@@ -46,7 +46,7 @@ const Header: React.FC = () =>{
   const [showMenu, setShowMenu] = useState(false);
   
   return (
-    <div className="headWrapper">
+    <div id="header" className={ isDark? 'headWrapper headWrapper--dark':'headWrapper headWrapper--bright'} >
       <div className="headAction">
         <div className={"header" }>          
           <a href="/"className= "header-mainIcon">
@@ -63,13 +63,9 @@ const Header: React.FC = () =>{
           <a href="#info"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Skills</a>
           <a href="#education"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Education</a>
           <a href="#experience"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Experience</a>
-          {/* <a href="#Projects"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Projects</a> */}
+          <a href="#projects"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Projects</a>
           {/* <a href="#Extra"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Extra</a> */}
-          <a href="#contactMe"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Contac tMe</a>
-          {/* <label>
-            <input type="checkbox" />
-            <span className="slider"></span>
-          </label> */}
+          <a href="#contactMe"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Contact Me</a>
         </div>
         <button className={isDark?"header-hamburger dark_btn":"header-hamburger"} onClick={()=>setShowMenu(!showMenu)}>
           {!showMenu ?
@@ -82,7 +78,7 @@ const Header: React.FC = () =>{
             <li><a href="#info"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Skills</a></li>
             <li><a href="#education"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Education</a></li>
             <li><a href="#experience"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Experience</a></li>
-            {/* <li><a href="#Projects"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Projects</a></li> */}
+            <li><a href="#projects"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Projects</a></li>
             {/* <li><a href="#Extra"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Extra</a></li> */}
             <li><a href="#contactMe"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Contact Me</a></li>
           </ul>
@@ -98,6 +94,7 @@ const Header: React.FC = () =>{
 const Layout: React.FC = () => {
   const darkPref = window.matchMedia("(prefers-color-scheme: dark)");
   const [isDark, setIsDark] = useLocalStorage("isDark", darkPref.matches);
+  const [scrollLoc, setScrollLoc] = useState(0);
 
   const changeTheme = () => {
     setIsDark(!isDark);
@@ -115,7 +112,20 @@ const Layout: React.FC = () => {
         document.getElementById("upScrollbtn")!.style.visibility = "hidden";
       }
     }  
+    if(document.getElementById("header") != null){
+      let currScrollLoc = document.documentElement.scrollTop;
+      if ( currScrollLoc <= 20 ) {
+        document.getElementById("header")!.style.position = "relative";
+      }
+      else if(currScrollLoc > scrollLoc && scrollLoc > 0){
+        document.getElementById("header")!.style.position = "relative"; 
+      }
+      else {
+        document.getElementById("header")!.style.position = "fixed"; 
+      }
 
+      setScrollLoc(currScrollLoc);
+    }
   }
   window.onscroll = function () {
     scrollFunction();

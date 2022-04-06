@@ -7,7 +7,7 @@ export interface MenuState {
 }
 
 const Proficiency: React.FC = () => {
-  return <div className="proficiency"  id="#Proficiency">
+  return <div className="proficiency" id="#Proficiency">
     <div className="proficiency_content">
         <div className="proficiency_content-title">Proficiency</div>
         <div className="proficiency_content-items">

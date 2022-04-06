@@ -14,7 +14,7 @@ const Experience: React.FC = () => {
   return (
     <div className="experience" id="experience">
       
-      <Modal isOpen={showExperienceDetail1} onRequestClose={()=>setShowExperienceDetail1(false)}>
+      <Modal   isOpen={showExperienceDetail1} onRequestClose={()=>setShowExperienceDetail1(false)}>
         <div className="flex">
           <div className="experience_modal-company">FASOO</div>
           <button className={"experience_modal-close "} onClick={()=>setShowExperienceDetail1(false)}> X</button>
