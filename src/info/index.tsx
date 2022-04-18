@@ -64,7 +64,7 @@ const Info: React.FC = () => {
           </div>
           <div className={isDark ?"dark info_text-skill":"info_text-skill"}>
            <img alt="⚡" draggable="false" src="http://twemoji.maxcdn.com/2/72x72/26a1.png" className="powerIcon" />
-            Java를 이용해 API를 만들어, SQL에서 원하는 내용을 받아올 수 있습니다.
+            사용자의 입장에서 UI/UX를 개발하고 있습니다.
           </div>
         </div>
       </div>

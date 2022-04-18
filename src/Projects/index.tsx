@@ -128,7 +128,7 @@ const Projects: React.FC = () => {
       <div className="bold">Site</div>
       <div className="projects_modal-description">https://parkyw1206.github.io/</div>
       <div className="projects_modal-description">해당 사이트는 saadpasta의 포토폴리오 템플릿(https://developerfolio.js.org/)을 기반으로 작업했습니다. 다만 HTML,CSS 코드를 가져다 사용하지 않고, 디자인만 참고하여 HTML, CSS 코딩은 
-      직접 징행했습니다.</div>
+      직접 진행했습니다.</div>
 
       </Modal>
     )

@@ -21,9 +21,9 @@ const Home: React.FC = ({}) => {
           Hi all, I'm Youngwoo
             <img alt="👋" draggable="false" src="http://twemoji.maxcdn.com/2/72x72/1f44b.png" className="wave-emoji-png"  />
           </span>
-          <span  className={isDark ? "dark greet-main_text--desc":"greet-main_text--desc"}>저는 열정적인 프론트 엔드 엔지니어입니다.
+          <span  className={isDark ? "dark greet-main_text--desc":"greet-main_text--desc"}>저는 2년차 프론트 엔드 개발자입니다.
           <img alt="🚀" draggable="false" src="http://twemoji.maxcdn.com/2/72x72/1f680.png" className="passionate-emoji"></img> 
-          현재 데이터 보안 분야에서 클라우드 서비스 프론트 엔드를 개발하고 있습니다. Typescript/Javascript/React를 이용한 웹 개발 경험이 있습니다. </span>
+          현재 데이터 보안 회사에서 클라우드 서비스 프론트 엔드를 개발하고 있습니다. Typescript/Javascript/React를 이용한 웹 개발 경험이 있습니다. </span>
         </span>
         <div className="greet-main_text-icons">
           <a
@@ -82,7 +82,7 @@ const Home: React.FC = ({}) => {
         </div>
         <span className="greet-main_btns">
           <a href="#contactMe" className="greet-main_btn">CONTACT ME</a>
-          <a href="https://drive.google.com/file/d/1l7FOYFjDUDSvBIlnu-WMx_4w5btxLti8/view?usp=sharing" className="greet-main_btn">SEE MY RESUME</a>
+          <a href="https://drive.google.com/file/d/1_DXyn5RA7JpVzGk_T2aPrnPy0hMrwIHA/view?usp=sharing" className="greet-main_btn">SEE MY RESUME</a>
         </span>
         
       </div>
