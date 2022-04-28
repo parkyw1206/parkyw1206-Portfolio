@@ -26,25 +26,56 @@ const Experience: React.FC = () => {
         </div>
 
         <ul className="experience_modal-container">
-          <li className="experience_modal-container-li">
-            <div className="experience_modal-container-title">Wrapsody eCo 2.0 UI/UX 전면 패치</div>
-            <div className="experience_modal-container-div">2021.03 - 현재</div>
+        <li className="experience_modal-container-li">
+            <div className="experience_modal-container-title">Wrapsody eCo 관리자 페이지 UI/UX 개편</div>
+            <div className="experience_modal-container-div">2022.02 - 2022.04</div>
             <ul>
-              <li>프로젝트 소개: 사내 보안 클라우드 솔루션(Wrapsody eCo) UI/UX 개편</li>
+              <li>프로젝트 소개: 외부 협업 보안 플랫폼(Wrapsody eCo)의 UI/UX 개편을 단독으로 진행중</li>
               <li>사용 언어/기술: Typescript, React, Storybook, Redux</li>
-              <li>Javascript와 Mobx를 사용하던 기존 사이트를 Typescript와 Redux로 변경</li>
-              <li>사용자가 최대한 쉽게 사용할 수 있고 정보를 빠르게 찾을 수 있도록 UI 개선</li>
-              <li>UI 변경 후, 고객 13% 증가</li>
+              <li>Wrapsody eCo 개편에 큰 반응을 얻어. Wrapsody eCo의 관리자 페이지를 제 1 개발자로
+개발 진행중</li>
+              <li>Javascript, Mobx를 Typescript,Redux로 변경</li>
+              <li>예상했던 기한은 3달이지만, 전에 했던 기술들을 활용해 한달 반만에 기본 개발 완료</li>
             </ul>
           </li>
           <li className="experience_modal-container-li">
+            <div className="experience_modal-container-title"> Wrapsody UI/UX 전면 패치</div>
+            <div className="experience_modal-container-div">2022.01 - NOW</div>
+            <ul>
+              <li>프로젝트 소개: 문서 가상화 플랫폼(Wrapsody)의 UI/UX 개편을 3명의 동료들과 함께 진행
+중. </li>
+              <li>사용 언어/기술: Typescript, React, Storybook, Redux</li>
+              <li>Angular를 Typescript,Redux로 변경중에 있음</li>
+              <li>Wrapsody eCo에 비해 두세배 큰 웹사이트인 만큼, 효율적으로 개발하는 것을 중심으로 개
+발하고 있음. 중복되는 component들의 재 사용을 자제하고 사용할 수 있는 데이터를 중복적으
+로 부르지않도록 유의하고 있음.</li>
+            </ul>
+          </li>
+
+          <li className="experience_modal-container-li">
             <div className="experience_modal-container-title"> 웹뷰를 이용해 Wrapsody eCo 윈도우 클라이언트 지원</div>
-            <div className="experience_modal-container-div">2021.03 - 현재</div>
+            <div className="experience_modal-container-div">2021.09 - 2021.11</div>
             <ul>
               <li>프로젝트 소개: 사용자의 편의성을 높여 좀 더 편하게 서비스를 사용하기 위해 윈도우 클라이
 언트 웹뷰 UI 개발 </li>
               <li>사용 언어/기술: Typescript, React, Storybook</li>
-              <li>웹에서 사용하는 기능들을 클라이언트에서도 80%의 기능을 쉽게 사용 가능</li>
+              <li>웹에서 사용하는 기능들을 클라이언트에서도 80%의 기능 구현</li>
+              <li>서버와의 통신만 생각했던 웹 개발과 달리, 클라이언트와의 통신을 추가로 고려하며 개발.</li>
+            </ul>
+          </li>
+          <li className="experience_modal-container-li">
+            <div className="experience_modal-container-title">Wrapsody eCo 2.0 UI/UX 전면 패치</div>
+            <div className="experience_modal-container-div">2021.03 - 2021.09</div>
+            <ul>
+              <li>프로젝트 소개: 사내 보안 클라우드 솔루션(Wrapsody eCo) UI/UX 개편</li>
+              <li>사용 언어/기술: Typescript, React, Storybook, Redux</li>
+              <li>Javascript와 Mobx를 사용하던 기존 사이트를 Typescript와 Redux로 변경</li>
+              <li>사내 공용 컴포넌트를 storybook으로 제작해 다른 제품에서도 같은 컴포넌트를 쉽게 사용할 수 있도록 함</li>
+              <li>사용자가 최대한 쉽게 사용할 수 있고 정보를 빠르게 찾을 수 있도록 UI 개선</li>
+              <li>UI 변경 후, 신규 고객들에게 크게 호평을 받아 기존 고객의 13% 증가</li>
+              
+              <li><a href="https://www.wrapsodyeco.com/"> 랩소디 에코 안내 사이트</a></li>
+              <li><a href="https://www.wrapsodyeco.com/pdf/kr/Wrapsody_eCo_v2.0_%EC%82%AC%EC%9A%A9%EC%9E%90_%EA%B0%80%EC%9D%B4%EB%93%9C_Windows.pdf">사용자 가이드</a></li>
             </ul>
           </li>
           <li className="experience_modal-container-li">
@@ -97,10 +128,16 @@ const Experience: React.FC = () => {
             <div className="experience_container--card-subtitle">랩소디 에코 프론트 엔드 개발</div>
             <ul>
               <li className="experience_container--card-subtitle-li">
-                Wrapsody eCo 2.0 UI/UX 전면 패치
+                Wrapsody eCo 관리자 페이지 UI/UX 개편
               </li>
               <li className="experience_container--card-subtitle-li">
-                웹뷰를 이용해 Wrapsody eCo 윈도우 클라이언트 지원
+                Wrapsody UI/UX 전면 패치
+              </li>
+              <li className="experience_container--card-subtitle-li">
+                Wrapsody eCo 윈도우 클라이언트 지원
+              </li>
+              <li className="experience_container--card-subtitle-li">
+                Wrapsody eCo UI/UX 전면 패치
               </li>
               <li className="experience_container--card-subtitle-li">
                WebRTC를 이용한 화상 회의 서비스 만들기

@@ -23,7 +23,7 @@ const BaseLayoutOutside: React.FC = () => {
   return (<div className="base">
         <Home />
         <Info/>
-        <Proficiency />
+        {/* <Proficiency /> */}
         <Education />
         <Projects />
         <Experience />
@@ -62,8 +62,8 @@ const Header: React.FC = () =>{
         <div className="header-menus">
           <a href="#info"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Skills</a>
           <a href="#education"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Education</a>
-          <a href="#experience"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Experience</a>
           <a href="#projects"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Projects</a>
+          <a href="#experience"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Experience</a>
           {/* <a href="#Extra"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Extra</a> */}
           <a href="#contactMe"className={isDark ? "header-menus--item dark_btn" : "header-menus--item"}>Contact Me</a>
         </div>
