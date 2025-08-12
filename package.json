@@ -1,6 +1,7 @@
 {
   "name": "2025-port",
   "version": "0.1.0",
+  "homepage": "https://parkyw1206.github.io",
   "private": true,
   "dependencies": {
     "@tailwindcss/cli": "^4.1.11",
@@ -24,7 +25,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "deploy": "npm ci && react-scripts build && firebase deploy"
   },
   "eslintConfig": {
     "extends": [
