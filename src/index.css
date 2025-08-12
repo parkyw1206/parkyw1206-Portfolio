@@ -1,21 +1,15 @@
+@import "tailwindcss";
 body {
   margin: 0;
-  font-family: 'NotoSansKR';
+  font-family: "Raleway", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-span{
-  font-family: 'NotoSansKR';
-}
-html{
-	scroll-behavior: smooth;
-}
-html,
-body {
-  scroll-behavior: smooth;
 }

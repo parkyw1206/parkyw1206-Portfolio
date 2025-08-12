@@ -1,0 +1,499 @@
+@import "../variable.scss";
+@import "../mixins.scss";
+.navigate {
+  padding: 0 52px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 30px;
+  background-color: rgba(33, 31, 35, 0.35);
+  border-radius: 40px;
+  &-button {
+    font-size: 20px;
+    color: $purple-300;
+    cursor: pointer;
+    display: flex;
+    align-content: center;
+    transition: background-color 0.3s, color 0.3s;
+
+    &.selected {
+      color: $white;
+    }
+    &:hover {
+      color: $gray-gradient;
+    }
+  }
+  > * + * {
+    margin-inline-start: 42px;
+  }
+}
+.education {
+  padding: 220px 200px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  @include laptop {
+    padding: 220px 20px 220px 20px;
+  }
+  &-item {
+    padding: 71px 84px;
+    border-radius: 80px;
+    display: flex;
+    border: 2px solid #272727;
+    margin-bottom: 90px;
+    @include laptop {
+      flex-direction: column;
+      margin-inline-end: 0;
+    }
+    &--left {
+      display: flex;
+      flex-direction: column;
+      width: 390px;
+      margin-inline-end: 150px;
+      @include laptop {
+        margin-inline-end: 0;
+        margin-bottom: 62px;
+      }
+    }
+    &--right {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 540px);
+      @include laptop {
+        width: 100%;
+      }
+    }
+    .companyName {
+      color: $white;
+      font-size: 28px;
+      font-weight: 600;
+      @include laptop {
+        font-size: 16px;
+      }
+    }
+    .major {
+      color: $purple-300;
+      font-size: 22px;
+      line-height: normal;
+      margin: 12px 0 16px 0;
+      @include laptop {
+        font-size: 16px;
+      }
+    }
+    .special {
+      color: $purple-300;
+      font-size: 18px;
+      line-height: normal;
+      font-weight: 600;
+      margin-bottom: 32px;
+      @include laptop {
+        margin-bottom: 16px;
+      }
+    }
+    .lectureList {
+      font-size: 22px;
+      color: $gray-400;
+      line-height: 30px;
+      white-space: break-spaces;
+      @include laptop {
+        font-size: 16px;
+      }
+    }
+    .lectureListDesc {
+      font-size: 16px;
+      color: $gray-400;
+      line-height: 30px;
+      white-space: break-spaces;
+      margin-inline-start: 8px;
+      @include laptop {
+        font-size: 14px;
+      }
+    }
+    .desc {
+      color: $gray-400;
+      font-size: 16px;
+      line-height: normal;
+    }
+    .descdot {
+      color: $green-500;
+      margin: 0 12px;
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+  }
+}
+.experience {
+  padding-top: 100px;
+  width: 100%;
+  padding: 220px 200px;
+  display: flex;
+  flex-direction: column;
+  @include laptop {
+    padding: 220px 20px 220px 20px;
+  }
+  .title {
+    font-size: 24px;
+    color: $gray-300;
+    line-height: 48px;
+    text-align: center;
+    width: 616px;
+    font-weight: lighter;
+    align-self: center;
+    .emphasis {
+      font-weight: 600;
+    }
+  }
+
+  &-item {
+    padding: 71px 84px;
+    border-radius: 80px;
+    opacity: 80%;
+    display: flex;
+    background-color: $gray-800;
+    @include laptop {
+      flex-direction: column;
+      margin-inline-end: 0;
+    }
+    &--left {
+      display: flex;
+      flex-direction: column;
+      width: 390px;
+      margin-inline-end: 150px;
+      @include laptop {
+        margin-inline-end: 0;
+        margin-bottom: 62px;
+      }
+    }
+    &--right {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 540px);
+      @include laptop {
+        width: 100%;
+      }
+    }
+    .jobTitle {
+      color: $white;
+      font-size: 28px;
+      font-weight: 600;
+      @include laptop {
+        font-size: 16px;
+      }
+    }
+    .status {
+      color: $purple-300;
+      font-size: 22px;
+      line-height: normal;
+      margin: 12px 0 16px 0;
+      @include laptop {
+        font-size: 16px;
+      }
+    }
+    .company {
+      color: $purple-300;
+      font-size: 22px;
+      line-height: normal;
+      font-weight: 600;
+      margin-bottom: 32px;
+      @include laptop {
+        margin-bottom: 16px;
+      }
+    }
+    .companydesc {
+      font-size: 22px;
+      color: $gray-400;
+      line-height: 42px;
+      white-space: break-spaces;
+      > .highlight {
+        color: $white;
+        font-weight: 600;
+        margin: 0 4px;
+      }
+      @include laptop {
+        font-size: 16px;
+      }
+    }
+    .desc {
+      color: $gray-400;
+      font-size: 16px;
+      line-height: normal;
+    }
+    .descdot {
+      color: $green-500;
+      margin: 0 12px;
+      display: inline-block;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+    }
+  }
+}
+.myself {
+  padding-top: 100px;
+  width: 100%;
+  padding: 220px 20px 220px 20px;
+  display: flex;
+  flex-direction: column;
+  &-exPage {
+    // height: 312px;
+    margin-top: 253px;
+    display: flex;
+    align-items: center;
+    padding: 0 200px;
+    @include laptop {
+      flex-direction: column;
+      padding: 0;
+    }
+    &--right {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 437px);
+      @include laptop {
+        width: 100%;
+      }
+    }
+    &--left {
+      font-size: 16px;
+      color: $gray-400;
+      min-width: 250px;
+      margin-inline-end: 187px;
+      @include laptop {
+        margin-inline-end: 0;
+        align-self: center;
+        text-align: center;
+      }
+      .point {
+        font-size: 80px;
+        font-weight: bold;
+        line-height: 48px;
+        color: $white;
+        margin: 20px 0;
+      }
+    }
+    &--skills {
+      display: flex;
+      // width: calc(100% - 437px);
+      width: 100%;
+      overflow: hidden;
+      scroll-behavior: smooth;
+
+      @include laptop {
+        margin-top: 55px;
+        width: calc(100%);
+        // min-height: 293px;
+      }
+    }
+    &--skill {
+      user-select: none;
+      -webkit-user-drag: none;
+      min-width: 409px;
+      min-height: 277px;
+      margin-inline-end: 40px;
+      padding-inline-start: 50px;
+      align-items: start;
+      justify-content: center;
+      background-color: white;
+      border-radius: 30px;
+      flex-direction: column;
+      display: flex;
+      @include laptop {
+        min-width: 220px;
+        min-height: 190px;
+        max-width: 220px;
+        max-height: 190px;
+      }
+      .title {
+        color: $gray-700;
+        font-weight: 700;
+        font-size: 26px;
+        margin-top: 11px;
+        @include laptop {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  &-intropage {
+    min-height: calc(100vh - 220px);
+    width: 100%;
+    padding: 0 200px;
+    @include laptop {
+      flex-direction: column-reverse;
+      align-items: center;
+      padding: 0;
+    }
+  }
+  &-intro {
+    display: flex;
+    flex-direction: column;
+    width: 662px;
+    @include laptop {
+      width: 100%;
+    }
+    &--title {
+      font-size: 75px;
+      line-height: normal;
+      color: $white;
+      @include laptop {
+        padding-top: 40px;
+        font-size: 52px;
+      }
+    }
+    &--desc {
+      font-size: 24px;
+      line-height: 48px;
+      color: $gray-400;
+      .point {
+        color: $white;
+        margin: 0 4px;
+      }
+      @include laptop {
+        padding-top: 23px;
+        font-size: 20px;
+      }
+    }
+    &--buttons {
+      margin-top: 48px;
+      height: 45px;
+      > * {
+        cursor: pointer;
+      }
+      > * + * {
+        margin-inline-start: 28px;
+      }
+
+      > .seeExperience {
+        color: $purple-300;
+        font-size: 16px;
+        line-height: normal;
+      }
+    }
+  }
+  &-picture {
+    width: 390px;
+    height: 390px;
+    overflow: hidden;
+    clip-path: path(
+      "M0,180 C0,60 60,0 200,0 C340,0 390,60 390,180 C390,300 340,380 200,380 C60,380 0,300 0,180 Z"
+    );
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center -10px;
+    }
+  }
+  &-tech {
+    display: flex;
+    flex-direction: column;
+    margin-top: 320px;
+    &--item {
+      margin: 16px 0;
+      display: flex;
+      align-items: center;
+      .logo {
+        background-color: #272727;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-inline-end: 14px;
+        border-radius: 50px;
+      }
+    }
+    &--list {
+      display: flex;
+      margin-top: 150px;
+      overflow: hidden;
+
+      > * {
+        border: 1px solid #232323;
+        min-width: 305px;
+        padding: 28px 34px 47px 32px;
+        border-radius: 8px;
+        margin-inline-end: 62px;
+        span {
+          font-size: 16px;
+          color: $white;
+          line-height: normal;
+        }
+      }
+    }
+    &--instruction {
+      // margin-inline-start: 200px;
+      font-weight: 400;
+      color: $white;
+      font-size: 60px;
+      // width: 794px;
+      @include laptop {
+        font-size: 32px;
+        // padding: 0 150px;
+        text-align: center;
+      }
+    }
+  }
+  &-mainItems {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 320px;
+    span {
+      font-size: 90px;
+      font-weight: 700;
+      @include laptop {
+        font-size: 40px;
+      }
+    }
+    > * + * {
+      margin-top: 80px;
+    }
+    > .first {
+      color: #c69aff;
+    }
+    > .second {
+      color: #9f53ff;
+    }
+    > .third {
+      color: #6104d6;
+    }
+  }
+}
+.dot-indicator {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  padding: 6px 0;
+  margin-top: 20px;
+}
+
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #888; /* 기본 회색 */
+  opacity: 0.3;
+
+  &.active {
+    width: 30px; /* ← 길게 */
+    height: 8px;
+    border-radius: 20px; /* ← pill 모양 */
+    background-color: #ddd;
+    opacity: 1;
+  }
+}
+.downloadCV {
+  background-color: $white;
+  padding: 12px 40px;
+  color: $gray-900;
+  line-height: normal;
+  width: fit-content;
+  font-weight: bold;
+  border-radius: 20px;
+}
