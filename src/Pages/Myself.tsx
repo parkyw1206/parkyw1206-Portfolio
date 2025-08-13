@@ -118,7 +118,13 @@ function Myself() {
             development of new apps.
           </span>
           <div className="myself-intro--buttons">
-            <span className="downloadCV">Download CV</span>
+            <a
+              href={require("../Shared/Files/Resume (Youngwoo Park).pdf")}
+              download="Resume (Youngwoo Park).pdf"
+              className="downloadCV"
+            >
+              Download CV
+            </a>
             <span
               className="seeExperience"
               onClick={() => navigate("/experience")}

@@ -8,12 +8,14 @@ function Experience() {
         <span className="emphasis">Front-End Software Engineer. </span>
         {`/>`}
       </span>
-      <span
-        className="downloadCV"
+      <a
         style={{ alignSelf: "center", marginTop: 43, marginBottom: 144 }}
+        href={require("../Shared/Files/Resume (Youngwoo Park).pdf")}
+        download="Resume (Youngwoo Park).pdf"
+        className="downloadCV"
       >
         Download CV
-      </span>
+      </a>
       <div className="experience-item">
         <div className="experience-item--left">
           <span className="jobTitle">Front-end Software Engineer</span>

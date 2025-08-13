@@ -497,3 +497,40 @@
   font-weight: bold;
   border-radius: 20px;
 }
+.port {
+  background-color: #1a1a1d;
+  min-height: 100%;
+  height: fit-content;
+  padding-bottom: 156px;
+  .followme {
+    background-color: #131313;
+    padding: 0 70px;
+    margin: 0 20px;
+    width: calc(100% - 40px);
+    align-items: center;
+    height: 90px;
+    align-items: center;
+    display: flex;
+    border-radius: 50px;
+    justify-content: space-between;
+    .followme-items {
+      display: flex;
+      flex-direction: row;
+      > * + * {
+        margin-inline-start: 8px;
+      }
+      > * {
+        cursor: pointer;
+      }
+    }
+    > span {
+      font-size: 26px;
+      line-height: 100%;
+      color: #6f6f6f;
+      border-radius: 50px;
+    }
+  }
+}
+.as {
+  color: white;
+}
