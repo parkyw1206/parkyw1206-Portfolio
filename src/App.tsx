@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 import Navigation from "./Pages/Navigation";
-import { BrowserRouter, Route, Routes } from "react-router";
+import { HashRouter, Route, Routes } from "react-router";
 import Myself from "./Pages/Myself";
 import Education from "./Pages/Education";
 import Experience from "./Pages/Experience";
@@ -12,7 +12,7 @@ function App() {
     changeTab(window.location.pathname);
   }, []);
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="port">
         <Navigation tab={tab} changeTab={changeTab} />
         <Routes>
@@ -65,7 +65,7 @@ function App() {
           </div>
         </div>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
